@@ -1,1 +1,116 @@
 @import "./styles/fonts.scss";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  height: 500px;
+  width: 400px;
+  position: relative;
+  font-family: Graphik;
+}
+
+.container-purple {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  color: white;
+  box-sizing: border-box;
+  background-color: #5031AA;
+}
+
+.purple-box-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+#desc-btn-black,
+#desc-btn-purple {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.container-black {
+  width: 100%;
+  height:100%;
+  padding: 40px;
+  color: white;
+  font-size:18px;
+  display: none;
+  box-sizing: border-box;
+  background-color: #231E32;
+}
+
+.black-box-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.btn-with-img {
+  display:flex;
+  align-items: center;
+  max-width: 150px;
+     > img {
+       margin-right: 10px;
+     }
+}
+
+btn-with-img:hover {
+  width: 300px;
+}
+
+.cross-icon {
+  transform: rotate(45deg);
+}
+
+// button animation
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+
+// media queries
+
+/* Extra small devices (phones, 300px and down)
+ and font size */
+@media only screen and (max-width: 400px) {
+  .box {
+    height: 400px;
+    width: 300px;
+  }
+  .container-black {
+    font-size: 13px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .box {
+    height:600px;
+    width:500px;
+  }
+  .container-black {
+    font-size: 23px;
+    line-height: 34px;
+  }
+  #desc-btn-black,
+  #desc-btn-purple {
+    font-size: 15px;
+  }
+}
